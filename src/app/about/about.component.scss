@@ -1,0 +1,28 @@
+
+@responsive {
+    .char-gray-900 {
+        @apply block text-gray-900 text-6xl font-bold transform scale-150 my-4;
+    }
+
+    .button-gray-900 {
+        @apply bg-gray-900 text-white text-base px-2 py-2 rounded-md w-32;
+    }
+
+    /*
+    .char-pos-left,
+    .char-pos-right {
+        @apply absolute text-center transform z-20 -translate-x-1/2;
+    }
+
+    .char-pos-left {
+        @apply left-25 top-25;
+    }
+    .char-pos-right {
+        @apply left-75 top-25;
+    }
+
+    .char-pos-none {
+        @apply relative text-center;
+    }
+    */
+}

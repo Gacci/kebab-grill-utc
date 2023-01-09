@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* 
+ *  Build site
+ *  ng build --prod --output-path=projects/BECA/docs --base-href=/beca-foundation-inc/ 
+ *  ng build --prod --project KebabGrill --output-path=projects/KebabGrill/docs --base-href=/kebab-grill-utc/
+ */
+
+
+ /* @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap'); */
+
+
+ @tailwind base;  
+ @tailwind components;  
+ @tailwind utilities;
+ 
+ 
+ 
+@layer utilities {
+    @responsive {
+        .text-script {
+            font-family: 'Marck Script', cursive;
+        }
+        .text-10xl {
+            font-size: 14rem;
+        }
+
+        .translate-y-1\/4 {
+            --transform-translate-y: 25%;
+        }
+        .-translate-y-1\/4 {
+            --transform-translate-y: -25%;
+        }
+        .translate-y-3\/4 {
+            --transform-translate-y: 75%;
+        }
+        .-translate-y-3\/4 {
+            --transform-translate-y: -75%;
+        }
+
+
+        .top-25 { top:25% }
+        .top-50 { top: 50%; }
+        .top-75 { top: 75%; }
+        .top-100 { top: 100%; }
+
+        .right-25 { right: 25%; }
+        .right-50 { right: 50%; }
+        .right-75 { right: 75%; }
+        .right-75 { right: 100%; }
+
+        .bottom-25 { bottom: 25%; }
+        .bottom-50 { bottom: 50%; }
+        .bottom-75 { bottom: 75%; }
+        .bottom-100 { bottom: 100%; }
+
+        .left-25 { left: 25%; }
+        .left-50 { left: 50%; }
+        .left-75 { left: 75%; }
+        .left-100 { left: 100%; }
+
+
+        
+        *.aspect-square:before,
+        *.aspect-1\/1:before,
+        *.aspect-2\/3:before, 
+        *.aspect-3\/2:before,
+        *.aspect-4\/5:before,
+        *.aspect-5\/4:before,
+        *.aspect-9\/10:before,
+        *.aspect-9\/16:before,
+        *.aspect-video:before,
+        *.aspect-16\/9:before{
+            content: '\0020';
+            display: block;
+        }
+
+
+
+        *.aspect-none:before{
+            display: none;
+            padding-top: 0;
+        }
+        *.aspect-square:before,
+        *.aspect-1\/1:before {
+            padding-top: 100%;
+        }
+        *.aspect-2\/3:before {
+            padding-top: calc(100% * calc(2 / 3));
+        } 
+        *.aspect-3\/2:before {
+            padding-top: calc(100% * calc(3 / 2));
+        }
+        *.aspect-3\/4:before {
+            padding-top: calc(100% * calc(3 / 4));
+        } 
+        *.aspect-4\/3:before {
+            padding-top: calc(100% * calc(4 / 3));
+        } 
+        *.aspect-4\/5:before {
+            padding-top: calc(100% * calc(4 / 5));
+        }
+        *.aspect-5\/4:before {
+            padding-top: calc(100% * calc(5 / 4));
+        }
+        *.aspect-9\/10:before {
+            padding-top: calc(100% * calc(9 / 10));
+        }
+        *.aspect-9\/16:before {
+            padding-top: calc(100% * calc(9 / 16));
+        }
+        *.aspect-video:before,
+        *.aspect-16\/9:before {
+            padding-top: calc(100% * calc(16 / 9));
+        }
+
+        .blur-1{ filter: blur(4px); }
+        .blur-2{ filter: blur(8px); }
+        .blur-3{ filter: blur(12px); }
+        .blur-4{ filter: blur(16px); }
+
+
+
+        .rounded-br-3xl,
+        .rounded-b-3xl{
+            border-bottom-right-radius: 1.5rem;
+        }
+        .rounded-bl-3xl,
+        .rounded-b-3xl{
+            border-bottom-left-radius: 1.5rem;
+        }
+
+
+        .input-yellow-600,
+        .area-yellow-600 {
+            @apply block w-full text-base rounded-md border-2 border-yellow-600 bg-yellow-300;
+        }
+
+        .area-yellow-600 {
+            @apply py-2 px-2; 
+        }
+        .input-yellow-600 {
+            @apply py-2 pl-8 pr-2; 
+        }
+
+        
+        .bg-clip-1{
+            clip-path: inset(20px 20px 20px 20px round 49% 49% 49% 49% / 81% 29% 81% 19%)
+        }
+        .bg-clip-2{
+            clip-path: inset(0px 10px 0px 10px round 79% 9% 90% 10%/30% 82% 18% 71%)
+        }
+    }
+
+    @variants focus, hover {
+        .area-yellow {
+            @apply outline-none border-yellow-800;
+        }
+    }
+}
